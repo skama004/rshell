@@ -17,11 +17,12 @@ This is done by parsing the user input into two arrays, commands and connectors,
 
 
 ###How to run:
+```
  $ git clone  https://github.com/skama004/rshell.git
  $ cd rshell
  $ git checkout hw0
  $ make
  $ bin/rshell
-
+```
 
 ###Bugs and Limitations
