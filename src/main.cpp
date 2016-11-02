@@ -11,7 +11,7 @@ using namespace std;
 int exec(string input);
 
 void run(vector<string> &cmd, vector<int> &cnct){
-     int i = 0;
+     unsigned int i = 0;
      int j = 0;
      string str = cmd.at(0);
      j = exec(str);
@@ -37,9 +37,9 @@ void run(vector<string> &cmd, vector<int> &cnct){
 }
 
 void getCommands(string input, vector<string> &v){
-     int pos = 0;
+     unsigned int pos = 0;
      string temp = " ";
-     for(int i = 0; i < input.size(); i++){
+     for(unsigned int i = 0; i < input.size(); i++){
          if(input.at(i) == '&' || input.at(i) == '|'){
              temp = input.substr(pos, i - pos);
              v.push_back(temp);
@@ -64,7 +64,7 @@ void getCommands(string input, vector<string> &v){
 
 
 void getConnectors(const string &input, vector<int> & v){
-     for(int i = 0; i < input.size(); i++){
+     for(unsigned int i = 0; i < input.size(); i++){
         if(input.at(i) == ';'){
            while(input.at(i) != ' '){
                 i++;
