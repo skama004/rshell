@@ -1,4 +1,5 @@
-##rshell
+#rshell
+###By Raqtan Hoq and Siddaardha Kamarsu
 
 rshell is our own personal bash terminal which reads in commands the user types in, reads the commands and connectors inputted and works to properly run the commands in the correct order. 
 
@@ -26,3 +27,7 @@ This is done by parsing the user input into two arrays, commands and connectors,
 ```
 
 ###Bugs and Limitations
+
+
+
+if any bugs were found please report to either skama004@ucr.edu or rhoq001@ucr.edu
