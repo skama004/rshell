@@ -6,7 +6,7 @@ rshell is our own personal bash terminal which reads in commands the user types 
 This is done by parsing the user input into two arrays, commands and connectors, and then using execvp and fork to properly run the commands. We also hard coded how rshell will handle the connectors.
 
 
-###Connectors
+##Connectors
 
 `||` - The or command will run the first command if it return true. If it returns false, then the second command will run.
 
@@ -17,7 +17,7 @@ This is done by parsing the user input into two arrays, commands and connectors,
 `#`- Comments are mean that anything after the # will not be ran.
 
 
-###How to run:
+##How to run:
 ```
  $ git clone  https://github.com/skama004/rshell.git
  $ cd rshell
@@ -26,7 +26,7 @@ This is done by parsing the user input into two arrays, commands and connectors,
  $ bin/rshell
 ```
 
-###Bugs and Limitations
+##Bugs and Limitations
 
 
 
