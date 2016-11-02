@@ -21,7 +21,7 @@ This is done by parsing the user input into two arrays, commands and connectors,
 ```
  $ git clone  https://github.com/skama004/rshell.git
  $ cd rshell
- $ git checkout hw0
+ $ git checkout hw2
  $ make
  $ bin/rshell
 ```
