@@ -132,15 +132,26 @@ bool getConnectors(const string &input, vector<int> & v){
 
 void exec(string input, int& status){
      //cout << "in exec" << endl;
-     int i = 0;
+     unsigned int i = 0;
      char *argv[10000];
      char *inputC;
      char *cmd;
+     input.erase(input.find_last_not_of(" ") + 1);
      while(input.at(i) == ' '){
           i++;
      }
      if(input.substr(i, 4) == "exit"){
-          exit(0);
+          if(i + 4 < input.size()){
+             i += 4;
+          }
+          else{
+             exit(0);
+          }
+          while(input.at(i) == ' '){
+             if(i + 1 >= input.size()) exit(0);
+             else i++;
+          }
+          if(input.at(i) == ';' || input.at(i) == '|' || input.at(i) == '&') exit(0);
      }
      i = 0;
      inputC = new char[input.size()];
@@ -161,7 +172,7 @@ void exec(string input, int& status){
             perror("Error with execvp");
             exit(-1);
         }
-        for(int s = 0; s < i; s++){
+        for(unsigned int s = 0; s < i; s++){
             argv[s] = NULL;
         }
         exit(0);
