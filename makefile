@@ -7,4 +7,5 @@ rshell:
 	@mkdir -p bin
 	$(CC) $(CFLAGS) src/main.cpp -o bin/rshell
 
-
+clean:
+	rm -rf bin
