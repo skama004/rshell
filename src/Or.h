@@ -26,6 +26,10 @@ class Or : public Base {
     Base* getRight(){ return right; }
 };
 
+
+// will execute left child then executes right child
+// only if left child failed. If either child succeeds
+// then true is returned for the funciton.
 bool Or::execute(){
     bool x;
     x = left->execute();

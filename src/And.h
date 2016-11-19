@@ -26,6 +26,9 @@ class And : public Base {
     Base* getRight(){ return right; }  
 };
 
+//executes left child then executes right child only if 
+//left child succeeded. Will only return true if both succeeded
+//or else will return false
 bool And::execute(){
     bool x;
     x = left->execute();

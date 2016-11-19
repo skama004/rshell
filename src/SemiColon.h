@@ -26,6 +26,9 @@ class SemiColon : public Base {
     Base* getRight(){ return right; }
 };
 
+
+//simply executes both children and returns the truth value of
+//whether the right child failed or succeeded
 bool SemiColon::execute(){
     bool x;
     x = left->execute();

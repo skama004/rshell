@@ -33,6 +33,8 @@ Commands::Commands(string str){
     input = str;
 }
 
+
+//function to put a string into execvp
 bool Commands::execute(){
     int status;
     unsigned int i = 0;

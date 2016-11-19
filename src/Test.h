@@ -36,6 +36,8 @@ class Test : public Base {
     Base* getRight(){ return NULL; }
 };
 
+//gets the flag from the string and converts it into an integer
+//deletes the flag in order to only evaluate the string afterwards
 Test::Test(string str){
     str.erase(str.find_last_not_of(" ") + 1);
     str.erase(0, str.find_first_not_of(" "));
@@ -58,6 +60,7 @@ Test::Test(string str){
     
 }
 
+//checks whether file exists only
 bool Test::check(){
     struct stat sb;
     string str = input;
@@ -70,6 +73,8 @@ bool Test::check(){
     cout << "(False) " << endl;
     return false;
 }
+
+//checks whether it exists and if it is a file
 
 bool Test::reg(){
     struct stat sb;
@@ -84,6 +89,7 @@ bool Test::reg(){
     return false;
 }
 
+//checks if it exists and if it is a directory
 bool Test::dir(){
     struct stat sb;
     string str = input;
@@ -97,6 +103,7 @@ bool Test::dir(){
     return false;
 }
 
+//sets flag based on what's given
 void Test::setFlag(int i){
     flag = i;
 }
@@ -104,18 +111,22 @@ void Test::setFlag(int i){
 bool Test::execute(){
     switch(flag){
         
+        //-e corresponds to 1
         case 1:
         return check();
         break;
         
+        //-f corresponds to 2
         case 2:
         return reg();
         break;
         
+        //-d corresponds to 3
         case 3:
         return dir();
         break;
         
+        //executes -e flag by default if flag not specified
         default:
         return check();
     }
