@@ -3,7 +3,9 @@
 
 rshell is our own personal bash terminal which reads in commands the user types in, reads the commands and connectors inputted and works to properly run the commands in the correct order. 
 
-This is done by parsing the user input into two arrays, commands and connectors, and then using execvp and fork to properly run the commands. We also hard coded how rshell will handle the connectors.
+This is done by parsing the user input into two arrays, commands and connectors, and then using execvp and fork to properly run the commands. We also hard coded how rshell will handle the connectors. 
+
+We built upon this so rshell now functions with the test command (also with the brackets operators) and with precendence operators. So rshell will now take precendence into account and can test files and directories and will return true or false whether they exist or not.
 
 
 ##Connectors
@@ -17,17 +19,33 @@ This is done by parsing the user input into two arrays, commands and connectors,
 `#`- Comments are mean that anything after the # will not be ran.
 
 
+##Test Functionality and Precendence Operators
+We built on rshell to function with precendence and can use the test operators to test files and directories. To use these one can use either the `test` command or the brackets `[ ]` to test their files with 3 flags:
+
+`-e` - Tests if exists
+`-f` - Tests if file and exists
+`-d` - Tests if directory and exists
+
+And if flag is not specified then `-e` will be the default. 
+
+Ex. `test -e main.cpp` 
+
+For brackets one must simply put the flag and the file in between brackets.
+
+Ex. `[ -e main.cpp ]`
+
+We also implemented precendence operators to change precendence of returns of commands, connectors, and chains of connectors. So if using parantheses, rshell takes the user input and equates whatever user types based on the precendence.
+
 ##How to run:
 ```
  $ git clone  https://github.com/skama004/rshell.git
  $ cd rshell
- $ git checkout hw2
+ $ git checkout hw3
  $ make
  $ bin/rshell
 ```
 
 ##Bugs and Limitations
-
 
 
 if any bugs were found please report to either skama004@ucr.edu or rhoq001@ucr.edu

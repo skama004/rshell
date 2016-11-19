@@ -53,6 +53,8 @@ class makeTree{
 
 makeTree::makeTree(string input){
     operate = true;
+    input.erase(input.find_last_not_of(" ") + 1);
+    input.erase(0, input.find_first_not_of(" "));
     operate = getConnectors(input);
     
     if(!operate){
@@ -298,6 +300,9 @@ bool makeTree::checkTest(string &str){
 }
 
 bool makeTree::getConnectors(const string &input){
+     if(input.at(input.size() - 1) == ';' || input.at(input.size() - 1) == '|' || input.at(input.size() - 1) == '&'){
+       return false;
+     }
      for(unsigned int i = 0; i < input.size(); i++){
         if(input.at(i) == ';'){ //Test for semicolons
            i++;
