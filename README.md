@@ -23,8 +23,11 @@ We built upon this so rshell now functions with the test command (also with the 
 We built on rshell to function with precendence and can use the test operators to test files and directories. To use these one can use either the `test` command or the brackets `[ ]` to test their files with 3 flags:
 
 `-e` - Tests if exists
+
 `-f` - Tests if file and exists
+
 `-d` - Tests if directory and exists
+
 
 And if flag is not specified then `-e` will be the default. 
 
