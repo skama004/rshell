@@ -55,7 +55,7 @@ The functionality now will also print the current working directory before the p
 ```
  $ git clone  https://github.com/skama004/rshell.git
  $ cd rshell
- $ git checkout hw3
+ $ git checkout hw4
  $ make
  $ bin/rshell
 ```
