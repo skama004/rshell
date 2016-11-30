@@ -39,6 +39,18 @@ Ex. `[ -e main.cpp ]`
 
 We also implemented precendence operators to change precendence of returns of commands, connectors, and chains of connectors. So if using parantheses, rshell takes the user input and equates whatever user types based on the precendence.
 
+##CD Functionality
+We built upon rshell again so now that rshell can handle the `cd` function to change between directories. rshell is capable of handling:
+
+`cd <PATH> ` to go through any path that exists on the system
+
+`cd` by itself will take you to the user's home directory
+
+`cd - ` will take you to the previous directory you were on 
+
+The functionality now will also print the current working directory before the prompt to show the user the exact path that they are on as they traverse through.
+
+
 ##How to run:
 ```
  $ git clone  https://github.com/skama004/rshell.git
